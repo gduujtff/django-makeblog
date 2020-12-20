@@ -133,6 +133,13 @@ STATIC_URL = '/static/'
 LOGIN_URL = 'myapp:login'
 LOGIN_REDIRECT_URL = 'myapp:index'
 
+
+AWS_STORAGE_BUCKET_NAME = 'djangomakeblog'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400', 
+}
+
 AWS_LOCATION ='media'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 MEDIA_ROOT = [os.path.join(BASE_DIR, 'media')]
