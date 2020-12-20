@@ -132,7 +132,7 @@ STATIC_URL = '/static/'
 LOGIN_URL = 'myapp:login'
 LOGIN_REDIRECT_URL = 'myapp:index'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = [os.path.join(BASE_DIR, 'media')]
 MEDIA_URL = '/media/'
 
 # Heroku
